@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:400,500" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Contact Form</title>
+    <link href="ContactStyleSheet.css" rel="stylesheet" type="text/css">
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+    <form id="contact" onsubmit="submitForm(event);">
+        <h1>Contact Us</h1>
+        <fieldset>
+            <legend>Name</legend>
+            <input type="text" name="name" placeholder="Name" required/>
+        </fieldset>
+        <div class="div-table">
+            <div class="div-cell" style="padding-right: 10px">
+                <fieldset>
+                    <legend>Address</legend>
+                    <input type="text" name="addressLine1" placeholder="Address Line 1">
+                    <input type="text" name="country" placeholder="Country">
+                    <input type="text" name="city" placeholder="City">
+                    <input type="text" name="province" placeholder="Province">
+                </fieldset>
+            </div>
+            <div class="div-cell" style="padding-left: 10px">
+                <fieldset>
+                    <legend>Contact</legend>
+
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="tel" name="cell" placeholder="Cell Number">
+                </fieldset>
+            </div>
+        </div>
+        <div>
+            <fieldset>
+                <legend>Message</legend>
+                <input type="text" name="subject" placeholder="Subject">
+                <textarea placeholder="Your message" required></textarea>
+            </fieldset>
+            <fieldset>
+                <button name="submit" type="submit" id="submit-button">Submit</button>
+            </fieldset>
+        </div>
+    </form>
+</div>
+
+
+</body>
+</html>
