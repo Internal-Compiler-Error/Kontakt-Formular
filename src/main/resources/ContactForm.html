@@ -1,24 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:400,500" rel="stylesheet">
     <meta charset="UTF-8">
     <title>Contact Form</title>
-    <link href="ContactStyleSheet.css" rel="stylesheet" type="text/css">
-
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script type="text/javascript" src="main.js"></script>
+    <link href="StyleSheets/GeneralStyleSheet.css" rel="stylesheet" type="text/css">
+    <link href="StyleSheets/ContactFormStyleSheet.css" rel="stylesheet" type="text/css">
 
 </head>
 
-
 <body>
-
-
 <div class="container">
-    <form id="contact" onsubmit="submitForm(event);">
+    <form id="contact-form">
         <h1>Contact Us</h1>
         <fieldset>
             <legend>Name</legend>
@@ -55,7 +48,7 @@
         </div>
     </form>
 </div>
-
-
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="Scripts/ContactForm.js"></script>
 </body>
 </html>
