@@ -1,4 +1,4 @@
-function objectifyForm(formArray) {//serialize data function
+function objectifyForm(formArray) {
     var returnArray = {};
     for (var i = 0; i < formArray.length; i++) {
         returnArray[formArray[i]['name']] = formArray[i]['value'];
@@ -7,20 +7,20 @@ function objectifyForm(formArray) {//serialize data function
 }
 
 
-function submitJSON() {
-    var json = objectifyForm($("#contact").serializeArray());
+function submitJSON(evt) {
+    var target = evt.target;
+    var json = objectifyForm(target);
     json = JSON.stringify(json);
-
-
     $.ajax("/form", {
         data: json,
         contentType: 'application/json',
         type: 'POST'
     });
-}
-
-function submitForm(e) {
-    e.preventDefault();
-    submitJSON();
     return false;
 }
+
+var contactForm = document.getElementById("contact-form")
+contactForm.addEventListener('submit', function (evt) {
+    evt.preventDefault();
+    submitJSON(evt);
+}, false);
