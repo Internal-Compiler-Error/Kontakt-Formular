@@ -6,7 +6,6 @@ function objectifyForm(formArray) {
     return returnArray;
 }
 
-
 function submitJSON(evt) {
     var target = evt.target;
     var json = objectifyForm(target);
@@ -16,11 +15,9 @@ function submitJSON(evt) {
         contentType: 'application/json',
         type: 'POST'
     });
-    return false;
 }
 
-var contactForm = document.getElementById("contact-form")
-contactForm.addEventListener('submit', function (evt) {
+$('#contact-form').on('submit', function (evt) {
     evt.preventDefault();
     submitJSON(evt);
-}, false);
+});
