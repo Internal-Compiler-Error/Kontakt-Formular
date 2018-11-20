@@ -7,8 +7,8 @@ function objectifyForm(formArray) {
 }
 
 function submitJSON(evt) {
-    var target = evt.target;
-    var json = objectifyForm(target);
+    var target = $(evt.target);
+    var json = objectifyForm(target.serializeArray());
     json = JSON.stringify(json);
     $.ajax('/form', {
         data: json,
