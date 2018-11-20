@@ -1,4 +1,4 @@
-package com.billwang2001;
+package com.billwang2001.model;
 
 
 public class ContactForm {
