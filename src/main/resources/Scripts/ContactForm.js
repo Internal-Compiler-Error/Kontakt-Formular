@@ -10,7 +10,7 @@ function submitJSON(evt) {
     var target = evt.target;
     var json = objectifyForm(target);
     json = JSON.stringify(json);
-    $.ajax("/form", {
+    $.ajax('/form', {
         data: json,
         contentType: 'application/json',
         type: 'POST'
