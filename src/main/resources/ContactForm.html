@@ -6,7 +6,6 @@
     <title>Contact Form</title>
     <link href="StyleSheets/GeneralStyleSheet.css" rel="stylesheet" type="text/css">
     <link href="StyleSheets/ContactFormStyleSheet.css" rel="stylesheet" type="text/css">
-
 </head>
 
 <body>
@@ -15,35 +14,36 @@
         <h1>Contact Us</h1>
         <fieldset>
             <legend>Name</legend>
-            <input type="text" name="name" placeholder="Name" required/>
+            <input name="name" placeholder="Name" required type="text"/>
         </fieldset>
         <div class="div-table">
             <div class="div-cell" style="padding-right: 10px">
                 <fieldset>
                     <legend>Address</legend>
-                    <input type="text" name="addressLine1" placeholder="Address Line 1">
-                    <input type="text" name="country" placeholder="Country">
-                    <input type="text" name="city" placeholder="City">
-                    <input type="text" name="province" placeholder="Province">
+                    <input name="addressLine1" placeholder="Address Line 1" type="text"/>
+                    <input name="country" placeholder="Country" type="text"/>
+                    <input name="city" placeholder="City" type="text"/>
+                    <input name="province" placeholder="Province" type="text"/>
                 </fieldset>
             </div>
             <div class="div-cell" style="padding-left: 10px">
                 <fieldset>
                     <legend>Contact</legend>
 
-                    <input type="email" name="email" placeholder="Email" required>
-                    <input type="tel" name="cell" placeholder="Cell Number">
+                    <input name="email" placeholder="Email" required type="email"/>
+                    <input name="cell" placeholder="Cell Number" type="tel"/>
                 </fieldset>
             </div>
         </div>
         <div>
             <fieldset>
                 <legend>Message</legend>
-                <input type="text" name="subject" placeholder="Subject">
-                <textarea placeholder="Your message" id="message" required></textarea>
+                <legend>Message</legend>
+                <input name="subject" placeholder="Subject" type="text"/>
+                <textarea id="message" placeholder="Your message" required></textarea>
             </fieldset>
             <fieldset>
-                <button name="submit" type="submit" id="submit-button">Submit</button>
+                <button id="submit-button" name="submit" type="submit">Submit</button>
             </fieldset>
         </div>
     </form>
