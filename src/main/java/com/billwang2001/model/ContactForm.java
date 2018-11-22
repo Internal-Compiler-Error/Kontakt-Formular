@@ -1,7 +1,14 @@
 package com.billwang2001.model;
 
+import javax.persistence.*;
 
+@Entity
+@Table(name = "contact_form")
 public class ContactForm {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
     private String name;
     private String email;
     private String AddressLine1;
@@ -11,6 +18,14 @@ public class ContactForm {
     private String cell;
     private String province;
     private String city;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;

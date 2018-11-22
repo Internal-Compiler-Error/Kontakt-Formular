@@ -1,15 +1,19 @@
 package com.billwang2001.controller;
 
 import com.billwang2001.model.ContactForm;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
+@RequestMapping("/api/v1")
 public class FormHandler {
-    @RequestMapping("/form")
-    public String form(@RequestBody ContactForm input) {
+
+    @RequestMapping(value = "contactForm", method = RequestMethod.POST)
+    public ContactForm create(@RequestBody ContactForm input) {
         ContactForm form = input;
-        return "success";
+        return form;
+    }
+
+    public ContactForm get(@PathVariable Long id) {
+        return null;
     }
 }
