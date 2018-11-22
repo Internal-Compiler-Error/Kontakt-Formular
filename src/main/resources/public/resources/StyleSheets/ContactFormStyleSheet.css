@@ -21,7 +21,7 @@ input {
     font-size: 16px;
 }
 
-#contact {
+#contact-form {
     border-radius: 4px;
     background: #bdc3c7;
     width: 40%;
@@ -67,4 +67,8 @@ textarea {
     height: 300px;
     font-family: 'Roboto Mono', monospace;
     font-size: 16px;
+}
+
+h1 {
+    text-align: center;
 }

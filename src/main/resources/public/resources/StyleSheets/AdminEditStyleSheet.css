@@ -1,0 +1,11 @@
+.pane {
+    background-color: #bdc3c7;
+    margin: 0 auto 0 auto;
+    width: 80%;
+    min-height: 900px;
+    border-radius: 2px;
+}
+
+.pane h1 {
+    padding: 20px;
+}
