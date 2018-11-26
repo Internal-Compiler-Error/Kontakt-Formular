@@ -3,17 +3,23 @@ package com.billwang2001.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "contact_form")
 public class ContactForm {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String name;
+
+//    @OneToOne
+//    private Address address;
+
     private String email;
+
+    private String name;
+    @Lob
+    private String message;
+
     private String AddressLine1;
     private String country;
-    private String message;
     private String subject;
     private String cell;
     private String province;
