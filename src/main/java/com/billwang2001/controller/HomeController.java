@@ -8,6 +8,6 @@ public class HomeController {
 
     @RequestMapping("/")
     public String contactForm() {
-        return "ContactForm.html";
+        return "redirect:ContactForm.html";
     }
 }
