@@ -8,13 +8,9 @@ public class ContactForm {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-//    @OneToOne
-//    private Address address;
-
     private String email;
-
     private String name;
+
     @Lob
     private String message;
 
