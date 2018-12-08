@@ -6,8 +6,8 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
 @EnableJpaRepositories
-public class ContactFormApplication {
+public class KontaktFormularApplication {
     public static void main(String[] args) {
-        SpringApplication.run(ContactFormApplication.class, args);
+        SpringApplication.run(KontaktFormularApplication.class, args);
     }
 }

@@ -11,15 +11,13 @@ public class ContactForm {
     private String email;
     private String name;
 
+    @OneToOne
+    private Address address;
+    private String subject;
+
     @Lob
     private String message;
 
-    private String AddressLine1;
-    private String country;
-    private String subject;
-    private String cell;
-    private String province;
-    private String city;
 
     public Long getId() {
         return id;
@@ -27,6 +25,14 @@ public class ContactForm {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
     }
 
     public String getName() {
@@ -45,22 +51,6 @@ public class ContactForm {
         this.email = email;
     }
 
-    public String getAddressLine1() {
-        return AddressLine1;
-    }
-
-    public void setAddressLine1(String addressLine1) {
-        AddressLine1 = addressLine1;
-    }
-
-    public String getCountry() {
-        return country;
-    }
-
-    public void setCountry(String country) {
-        this.country = country;
-    }
-
     public String getMessage() {
         return message;
     }
@@ -77,27 +67,5 @@ public class ContactForm {
         this.subject = subject;
     }
 
-    public String getCell() {
-        return cell;
-    }
 
-    public void setCell(String cell) {
-        this.cell = cell;
-    }
-
-    public String getProvince() {
-        return province;
-    }
-
-    public void setProvince(String province) {
-        this.province = province;
-    }
-
-    public String getCity() {
-        return city;
-    }
-
-    public void setCity(String city) {
-        this.city = city;
-    }
 }
