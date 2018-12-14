@@ -13,7 +13,7 @@ public class FormHandler {
     @Autowired
     private ContactFormService service;
 
-
+    @CrossOrigin
     @RequestMapping(value = "contact-form", method = RequestMethod.POST)
     public ContactForm create(@RequestBody ContactForm input) {
         ContactForm form = input;
@@ -21,16 +21,19 @@ public class FormHandler {
         return form;
     }
 
+    @CrossOrigin
     @RequestMapping(value = "contact-form/{id}", method = RequestMethod.GET)
     public ContactForm retrieve(@PathVariable long id) {
         return service.get(id);
     }
 
+    @CrossOrigin
     @RequestMapping(value = "contact-form", method = RequestMethod.GET)
     public List<ContactForm> list() {
         return service.getList();
     }
 
+    @CrossOrigin
     @RequestMapping(value = "contact-form/{id}", method = RequestMethod.DELETE)
     public ContactForm delete(@PathVariable Long id) {
         ContactForm existingContactForm = service.get(id);
