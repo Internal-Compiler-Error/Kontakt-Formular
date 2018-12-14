@@ -1,5 +1,6 @@
 package com.billwang2001.model;
 
+
 import javax.persistence.*;
 
 @Entity
@@ -10,14 +11,23 @@ public class ContactForm {
     private Long id;
     private String email;
     private String name;
+    private String cell;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.PERSIST)
     private Address address;
+
     private String subject;
 
     @Lob
     private String message;
 
+    public String getCell() {
+        return cell;
+    }
+
+    public void setCell(String cell) {
+        this.cell = cell;
+    }
 
     public Long getId() {
         return id;

@@ -13,7 +13,6 @@ public class Address {
 
     private String addressLine1;
     private String country;
-    private String cell;
     private String province;
     private String city;
     private String postalCode;
@@ -40,14 +39,6 @@ public class Address {
 
     public void setCountry(String country) {
         this.country = country;
-    }
-
-    public String getCell() {
-        return cell;
-    }
-
-    public void setCell(String cell) {
-        this.cell = cell;
     }
 
     public String getProvince() {
