@@ -40,4 +40,12 @@ public class FormHandler {
         service.delete(existingContactForm);
         return existingContactForm;
     }
+
+    @CrossOrigin
+    @RequestMapping(value = "contact-form/{id}", method = RequestMethod.PUT)
+    public ContactForm put(@PathVariable Long id,
+                           @RequestBody ContactForm input) {
+        return service.put(id, input);
+    }
+
 }
