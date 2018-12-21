@@ -27,4 +27,12 @@ public class ContactFormService {
     public void delete(ContactForm contactForm) {
         repository.delete(contactForm);
     }
+
+    public ContactForm put(Long id, ContactForm input) {
+        ContactForm contactForm = repository.getOne(id);
+        input.setId(id);
+        contactForm = input;
+        repository.save(contactForm);
+        return contactForm;
+    }
 }
