@@ -16,11 +16,11 @@ public class ContactFormService {
         return repository.save(contactForm);
     }
 
-    public ContactForm get(Long id) {
+    public ContactForm getById(Long id) {
         return repository.getOne(id);
     }
 
-    public List<ContactForm> getList() {
+    public List<ContactForm> getAll() {
         return repository.findAll();
     }
 

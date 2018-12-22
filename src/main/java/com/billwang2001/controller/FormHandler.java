@@ -24,19 +24,19 @@ public class FormHandler {
     @CrossOrigin
     @RequestMapping(value = "contact-form/{id}", method = RequestMethod.GET)
     public ContactForm retrieve(@PathVariable long id) {
-        return service.get(id);
+        return service.getById(id);
     }
 
     @CrossOrigin
     @RequestMapping(value = "contact-form", method = RequestMethod.GET)
     public List<ContactForm> list() {
-        return service.getList();
+        return service.getAll();
     }
 
     @CrossOrigin
     @RequestMapping(value = "contact-form/{id}", method = RequestMethod.DELETE)
-    public ContactForm delete(@PathVariable Long id) {
-        ContactForm existingContactForm = service.get(id);
+    public ContactForm delete(@PathVariable(value = "id") Long id) {
+        ContactForm existingContactForm = service.getById(id);
         service.delete(existingContactForm);
         return existingContactForm;
     }
